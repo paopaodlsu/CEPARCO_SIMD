@@ -58,7 +58,7 @@ In Release mode, the performance difference between XMM and YMM was small. At 2^
 
 ---
 ## Correctness Check
-Correctness checks for all the tested vector sizes are already implemented in the main program and shown in the Program Output and Execution Time Section
+Correctness checks for all the tested vector sizes are already implemented in the main program and shown in the Program Output and Execution Time Section.
 The correctness results below use the Debug results with a vector size of 2<sup>20</sup>
 
 ### C
