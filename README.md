@@ -46,6 +46,7 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 | 2<sup>26</sup> | 34.946617 ms | 42.264160 ms | 37.312290 ms | 36.982870 ms |
 | 2<sup>28</sup> | 150.827237 ms | 196.881110 ms | 151.298413 ms | 147.800773 ms |
 
+
 ### Speedup Comparison
 Speedup is calculated by dividing the C execution time by the execution time of each implementation. Values above 1.00x indicate a speedup over C.
 
