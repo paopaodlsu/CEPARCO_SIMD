@@ -6,7 +6,6 @@
 - Tiu, Kyle 
 ---
 ## Program Output and Execution Time
-### Program Output
 [insert screenshot of the program output with execution time for all cases]
 
 ---
