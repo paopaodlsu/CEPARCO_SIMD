@@ -46,6 +46,16 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 | 2<sup>26</sup> | 34.946617 ms | 42.264160 ms | 37.312290 ms | 36.982870 ms |
 | 2<sup>28</sup> | 150.827237 ms | 196.881110 ms | 151.298413 ms | 147.800773 ms |
 
+### Speedup Comparison
+Speedup is calculated by dividing the C execution time by the execution time of each implementation. Values above 1.00x indicate a speedup over C.
+
+### Debug Results
+| Vector Size | C | x84-64 | SIMD XMM | SIMD YMM |
+|-------------|---|--------|----------|----------|
+| 2<sup>20</sup> | 1.000x | 2.554x | 3.605x | 4.550x |
+| 2<sup>26</sup> | 1.000x | 2.934x | 4.005x | 4.054x |
+| 2<sup>28</sup> | 1.000x | 2.415x | 4.054x | 4.225x |
+
 ### Analysis
 
 The results show that performance depends on the vector size and build configuration. In Debug mode, the assembly implementations outperformed the C implementation consistently. YMM was approximately 4.2% faster than XMM.
