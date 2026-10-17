@@ -30,7 +30,7 @@ The following screenshots show the program outputs and average execution times f
 
 ---
 ## Comparative Table and Performance Analysis
-### Debug Results
+### Debug Results (Average time)
 Each kernel automatically runs 30 times, and the average execution time is recorded below:
 | Vector Size | C (ms) | x84-64 (ms) | SIMD XMM (ms) | SIMD YMM (ms) |
 |-------------|--------|-------------|---------------|---------------|
@@ -38,7 +38,7 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 | 2<sup>26</sup> | 150.110820 ms | 51.171017 ms | 37.480680 ms | 37.028573 ms |
 | 2<sup>28</sup> | 589.386130 ms | 244.100700 ms | 145.379133 ms | 139.506310 ms |
 
-### Release Results
+### Release Results (Average time)
 Each kernel automatically runs 30 times, and the average execution time is recorded below:
 | Vector Size | C (ms) | x84-64 (ms) | SIMD XMM (ms) | SIMD YMM (ms) |
 |-------------|--------|-------------|---------------|---------------|
@@ -50,14 +50,14 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 ### Speedup Comparison
 Speedup is calculated by dividing the C execution time by the execution time of each implementation. Values above 1.00x indicate a speedup over C.
 
-### Debug Results
+### Debug Results (Speedup)
 | Vector Size | C | x84-64 | SIMD XMM | SIMD YMM |
 |-------------|---|--------|----------|----------|
 | 2<sup>20</sup> | 1.000x | 2.554x | 3.605x | 4.550x |
 | 2<sup>26</sup> | 1.000x | 2.934x | 4.005x | 4.054x |
 | 2<sup>28</sup> | 1.000x | 2.415x | 4.054x | 4.225x |
 
-### Release Results
+### Release Results (Speedup)
 | Vector Size | C | x84-64 | SIMD XMM | SIMD YMM |
 |-------------|---|--------|----------|----------|
 | 2<sup>20</sup> | 1.000x | 0.755x | 1.230x | 1.238x |
