@@ -76,8 +76,6 @@ In Release mode, the performance difference between XMM and YMM was small. At 2^
 
 The speedup results further demonstrate the performance advantage of SIMD implementations, particularly in Debug mode. At 2^28, scalar assembly achieved a 2.415× speedup over C, while XMM and YMM achieved 4.054× and 4.225×, respectively. This shows that SIMD provides greater speedups by processing multiple elements simultaneously, although the improvements become less significant in Release mode due to compiler optimizations.
 
----
-## Speedup Comparison
 
 ---
 ## Correctness Check
@@ -107,9 +105,9 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 
 ---
 ## Overall Results Analysis
-The results show that the fastest implementation depends on the build configuration and vector size. In Debug mode, YMM achieved the lowest execution time for all three vector sizes, reaching a speedup of approximately 4.22× over C at 2^28. Its 256-bit registers process eight single-precision floats per vector instruction, compared with four floats for 128-bit XMM registers, reducing loop iterations and improving throughput.
+The results show that the fastest implementation depends on the build configuration and vector size. In Debug mode, YMM achieved the lowest execution time for all three vector sizes, reaching a speedup of approximately 4.22× over C at 2<sup>28</sup>. Its 256-bit registers process eight single-precision floats per vector instruction, compared with four floats for 128-bit XMM registers, reducing loop iterations and improving throughput.
 
-In Release mode, the optimized C implementation outperformed scalar assembly at every tested size. XMM and YMM performed better than C at 2^20, but both were slightly slower at 2^26. At 2^28, YMM achieved the lowest execution time at 147.80 ms, approximately 1.02× faster than C at 150.83 ms and XMM at 151.30 ms. This shows that compiler optimization can make C highly efficient and that wider SIMD registers do not guarantee proportional speedups.
+In Release mode, the optimized C implementation outperformed scalar assembly at every tested size. XMM and YMM performed better than C at 2^20, but both were slightly slower at 2<sup>26</sup>. At 2<sup>28</sup>, YMM achieved the lowest execution time at 147.80 ms, approximately 1.02× faster than C at 150.83 ms and XMM at 151.30 ms. This shows that compiler optimization can make C highly efficient and that wider SIMD registers do not guarantee proportional speedups.
 
 The small performance difference between XMM and YMM for larger vectors suggests that memory bandwidth may limit the benefit of additional SIMD width. The vector triad performs one multiplication and one addition per element while transferring 16 bytes of data. Consequently, performance depends not only on the number of elements processed per instruction but also on memory behavior, loop overhead, and compiler optimization.
 
