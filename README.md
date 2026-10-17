@@ -94,6 +94,8 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 ### SIMD YMM register
 <img width="454" height="76" alt="image" src="https://github.com/user-attachments/assets/8df6445b-16df-4e81-9183-19b48cc08ed3"/>
 
+All four implementations displayed "PASS" in the correctness check, confirming that their outputs matched the C implementation.
+
 ---
 ## Boundary Check
 ### (Debug Mode) n = 1,003
