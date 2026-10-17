@@ -58,6 +58,7 @@ In Release mode, the performance difference between XMM and YMM was small. At 2^
 
 ---
 ## Correctness Check
+Correctness checks for all the tested vector sizes are already implemented in the main program and shown in the Program Output and Execution Time Section
 The correctness results below use the Debug results with a vector size of 2<sup>20</sup>
 
 ### C
@@ -72,8 +73,6 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 ### SIMD YMM register
 <img width="454" height="76" alt="image" src="https://github.com/user-attachments/assets/8df6445b-16df-4e81-9183-19b48cc08ed3"/>
 
-
-* Correctness checks for all the tested vector sizes are already implemented in the main program and shown in the Program Output and Execution Time Section
 ---
 ## Boundary Check
 [insert screenshot of boundary check for SIMD XMM and SIMD YMM]
