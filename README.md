@@ -97,5 +97,4 @@ Overall, YMM provided the best measured performance for the largest vector size,
 
 ---
 ## Implementation Discussion
-[insert problems encountered and solutions]
-[insert unique methodology used and AHA moments]
+The primary roadblock that the group encountered was handling the tail portion of vector sizes that were not divisible by 4 or 8, as this directly affected the XMM and YMM versions of the kernel. To this end, the group’s major AHA! moment was when the realization was made that by using logic AND, the group is able to round down a provided number to its nearest multiple of 4 and 8 for the XMM and YMM implementations respectively. As such, these two kernels were specially modified in a way that has a main loop complete the vector computations in groups of 4 and 8 bytes first, then has a smaller loop that occurs after the main loop that handles the stragglers. As an example, if the vector size was set to 1003, the first 1000 indexes are completed in the main loop while the last 3 indexes are handled by the smaller loop.  
