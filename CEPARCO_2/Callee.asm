@@ -1,19 +1,26 @@
 section .text
 bits 64
 default rel
-global square_asm
+global vector_asm
 
-square_asm:
-	xor r8, r8
+vector_asm:
+    push rbp
+    mov rbp, rsp
+    mov r10d, [rbp+48]
+    xor eax, eax
+
 L1:
-	cmp r8, rdx
-	jge L2
+    cmp eax, r10d
+    jge L2
 
-	movss xmm0, [rcx + r8*4]
-	mulss xmm0, xmm0
-	movss [rcx + r8*4], xmm0
+    movss xmm0, [r8 + rax*4]
+    mulss xmm0, [r9 + rax*4]
+    addss xmm0, [rdx + rax*4]
+    movss [rcx + rax*4], xmm0
 
-	inc r8
-	jmp L1
+    inc eax
+    jmp L1
+
 L2:
-	ret
+    pop rbp
+    ret

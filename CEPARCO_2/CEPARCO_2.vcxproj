@@ -24,6 +24,7 @@
     <ProjectGuid>{dc38c6c0-5f48-429d-8fb0-96b2801e74bf}</ProjectGuid>
     <RootNamespace>CEPARCO2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CEPARCO_SIMD</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -146,22 +147,28 @@
     <CustomBuild Include="Callee.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NASM\nasm.exe -f win64 Callee.asm</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Callee.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"C:\NASM\nasm.exe" -f win64 "%(FullPath)" -o "$(IntDir)%(Filename).obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"C:\NASM\nasm.exe" -f win64 "%(FullPath)" -o "$(IntDir)%(Filename).obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="calleexmm.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NASM\nasm.exe -f win64 calleexmm.asm</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">calleexmm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"C:\NASM\nasm.exe" -f win64 "%(FullPath)" -o "$(IntDir)%(Filename).obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"C:\NASM\nasm.exe" -f win64 "%(FullPath)" -o "$(IntDir)%(Filename).obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
     <CustomBuild Include="calleeymm.asm">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\NASM\nasm.exe -f win64 calleeymm.asm</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">calleeymm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"C:\NASM\nasm.exe" -f win64 "%(FullPath)" -o "$(IntDir)%(Filename).obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"C:\NASM\nasm.exe" -f win64 "%(FullPath)" -o "$(IntDir)%(Filename).obj</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
