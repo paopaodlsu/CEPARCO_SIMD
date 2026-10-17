@@ -83,7 +83,7 @@ void display_results(const char* name, float* arrA, int n,
 }
 
 int main(int argc, char* argv[]) {
-    int n = 13;
+    int n = 268435456;
 
     if (argc > 1) {
         char* end;
