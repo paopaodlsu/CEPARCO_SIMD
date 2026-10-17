@@ -50,15 +50,19 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 
 ---
 ## Correctness Check
+The correctness results below use the Debug results with a vector size of 2<sup>20</sup>
+
 ### C
-<img width="446" height="82" alt="image" src="https://github.com/user-attachments/assets/9c0b42d8-a04d-416b-8eba-94c462348c35" />
+<img width="456" height="92" alt="image" src="https://github.com/user-attachments/assets/9c0b42d8-a04d-416b-8eba-94c462348c35" />
 
 ### x86-64
-[insert screenshot of program output, including correctness check]
+<img width="459" height="86" alt="image" src="https://github.com/user-attachments/assets/980601de-0ab4-460d-8471-e5e534de220e" />
+
 ### SIMD XMM register
-[insert screenshot of program output, including correctness check]
+<img width="456" height="87" alt="image" src="https://github.com/user-attachments/assets/18df5d22-efe4-4997-83f4-ce46d1609be7" />
+
 ### SIMD YMM register
-[insert screenshot of program output, including correctness check]
+<img width="454" height="76" alt="image" src="https://github.com/user-attachments/assets/8df6445b-16df-4e81-9183-19b48cc08ed3" />
 
 ---
 ## Boundary Check
