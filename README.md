@@ -12,7 +12,7 @@
 <img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/e4824f90-ed5f-4629-a438-3c6f5dd30d8b"/>
 
 ### 2<sup>26</sup>
-<img width="1294" height="1160" alt="image" src="https://github.com/user-attachments/assets/333239c2-6d5c-4dd6-a2c9-a0bbe1c71b00" />
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/333239c2-6d5c-4dd6-a2c9-a0bbe1c71b00" />
 ### 2<sup>28</sup> (as alternative for 2<sup>30</sup>)
 <img width="1304" height="1158" alt="image" src="https://github.com/user-attachments/assets/9c1ffa74-a40a-4a51-a66d-34ff40b6cce3" />
 
