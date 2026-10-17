@@ -46,16 +46,15 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 | 2<sup>28</sup> | 150.827237 ms | 196.881110 ms | 151.298413 ms | 147.800773 ms |
 
 ### Analysis
-<p align="justify">
+<p align="justify"
 The results show that performance depends on the vector size and build configuration. In Debug mode, the assembly implementations outperformed the C implementation consistently. YMM also outperformed XMM by approximately 4%.
-
+<p align="justify"
 In Release mode, however, the C implementation performed better than any scalar assembly at every tested vector size. Indicating that the compiler’s optimizations can produce more efficient code than a straightforward scalar assembly loop. This successfully shows why it matters to analyze performance both in Debug and Release mode separately.
-
+<p align="justify"
 SIMD improved performance by processing multiple single-precision floating-point values in parallel. XMM registers being 128 bits wide processes four floats per vector instruction, YMM registers being 256 bits wide processes eight floats per vector instruction. It reduces loop overhead, and explains why XMM, especially YMM, is at an advantage with larger vector sizes.
-
-In Release mode, the performance difference between XMM and YMM was small. At 2^28 YMM took 147.8ms, compared with 151.3ms for XMM, making it approximately 1.02x faster. Since the vector triad performs only one multiplication and one addition per element while transferring 16 bytes of data, memory bandwidth may limit performance. Although for computer/computing time, which operates under nano-pico seconds this has a relative difference.
+<p align="justify"
+In Release mode, the performance difference between XMM and YMM was small. At 2^28 YMM took 147.8ms, compared with 151.3ms for XMM, making it approximately 1.02x faster. Since the vector triad performs only one multiplication and one addition per element while transferring 16 bytes of data, memory bandwidth may limit performance. Although for computer/<p align="justify"computing time, which operates under nano-pico seconds this has a relative difference.
 </p>
-
 ---
 ## Correctness Check
 The correctness results below use the Debug results with a vector size of 2<sup>20</sup>
