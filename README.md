@@ -51,7 +51,8 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 ---
 ## Correctness Check
 ### C
-[insert screenshot of program output with correctness check]
+<img width="446" height="82" alt="image" src="https://github.com/user-attachments/assets/9c0b42d8-a04d-416b-8eba-94c462348c35" />
+
 ### x86-64
 [insert screenshot of program output, including correctness check]
 ### SIMD XMM register
