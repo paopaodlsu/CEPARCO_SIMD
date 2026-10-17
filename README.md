@@ -11,8 +11,7 @@
 ---
 ## Comparative Table and Performance Analysis
 ### Table
-[insert comparative table of execution time for all 4 kernels]
-
+Each kernel automatically runs 30 times, and the average execution time is recorded below:
 | Vector Size | C (ms) | x84-64 (ms) | SIMD XMM (ms) | SIMD YMM (ms) |
 |-------------|--------|-------------|---------------|---------------|
 | [insert size] | [insert sec] | [insert sec] | [insert sec] | [insert sec] |
