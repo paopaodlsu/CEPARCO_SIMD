@@ -46,7 +46,6 @@ Each kernel automatically runs 30 times, and the average execution time is recor
 | 2<sup>26</sup> | 34.946617 ms | 42.264160 ms | 37.312290 ms | 36.982870 ms |
 | 2<sup>28</sup> | 150.827237 ms | 196.881110 ms | 151.298413 ms | 147.800773 ms |
 
-
 ### Speedup Comparison
 Speedup is calculated by dividing the C execution time by the execution time of each implementation. Values above 1.00x indicate a speedup over C.
 
@@ -56,13 +55,6 @@ Speedup is calculated by dividing the C execution time by the execution time of 
 | 2<sup>20</sup> | 1.000x | 2.554x | 3.605x | 4.550x |
 | 2<sup>26</sup> | 1.000x | 2.934x | 4.005x | 4.054x |
 | 2<sup>28</sup> | 1.000x | 2.415x | 4.054x | 4.225x |
-
-### Release Results
-| Vector Size | C | x84-64 | SIMD XMM | SIMD YMM |
-|-------------|---|--------|----------|----------|
-| 2<sup>20</sup> | 1.000x | 0.755x | 1.230x | 1.238x |
-| 2<sup>26</sup> | 1.000x | 0.827x | 0.937x | 0.945x |
-| 2<sup>28</sup> | 1.000x | 0.766x | 0.997x | 1.020x |
 
 ### Analysis
 
@@ -117,4 +109,4 @@ Overall, YMM provided the best measured performance for the largest vector size,
 ## Implementation Discussion
 The primary roadblock that the group encountered was handling the tail portion of vector sizes that were not divisible by 4 or 8, as this directly affected the XMM and YMM versions of the kernel. To this end, the group’s major AHA! moment was when the realization was made that by using logic AND, the group is able to round down a provided number to its nearest multiple of 4 and 8 for the XMM and YMM implementations respectively. As such, these two kernels were specially modified in a way that has a main loop complete the vector computations in groups of 4 and 8 bytes first, then has a smaller loop that occurs after the main loop that handles the stragglers. As an example, if the vector size was set to 1003, the first 1000 indexes are completed in the main loop while the last 3 indexes are handled by the smaller loop.  
 
-# NOTE: The program was designed with the idea that the vector size is to be hardcoded. As such, the testing was done through manually inputting the vector size and running the program for each different value of n
+NOTE: The program was designed with the idea that the vector size is to be hardcoded. As such, the testing was done through manually inputting the vector size and running the program for each different value of n
