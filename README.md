@@ -14,7 +14,7 @@
 Each kernel automatically runs 30 times, and the average execution time is recorded below:
 | Vector Size | C (ms) | x84-64 (ms) | SIMD XMM (ms) | SIMD YMM (ms) |
 |-------------|--------|-------------|---------------|---------------|
-| 2^20 | 2.228727 ms | 0.872700 ms | 0.618217 ms | 0.489837 ms |
+| 2<sup>20</sup> | 2.228727 ms | 0.872700 ms | 0.618217 ms | 0.489837 ms |
 | 2^26 | 150.110820 ms | 51.171017 ms | 37.480680 ms | 37.028573 ms |
 | 2^28 | 589.386130 ms | 244.100700 ms | 145.379133 ms | 139.506310 ms |
 
