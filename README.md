@@ -74,6 +74,8 @@ SIMD improved performance by processing multiple single-precision floating-point
 
 In Release mode, the performance difference between XMM and YMM was small. At 2^28 YMM took 147.8ms, compared with 151.3ms for XMM, making it approximately 1.02x faster. Since the vector triad performs only one multiplication and one addition per element while transferring 16 bytes of data, memory bandwidth may limit performance. Although for computer/computing time, which operates under nano-pico seconds this has a relative difference.
 
+The speedup results further demonstrate the performance advantage of SIMD implementations, particularly in Debug mode. At 2^28, scalar assembly achieved a 2.415× speedup over C, while XMM and YMM achieved 4.054× and 4.225×, respectively. This shows that SIMD provides greater speedups by processing multiple elements simultaneously, although the improvements become less significant in Release mode due to compiler optimizations.
+
 ---
 ## Speedup Comparison
 
