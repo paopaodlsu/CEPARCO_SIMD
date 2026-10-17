@@ -76,7 +76,7 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 ---
 ## Boundary Check
 ### (Debug Mode) n = 1,003
-<img width="1242" height="1156" alt="image" src="https://github.com/user-attachments/assets/567034a9-6f29-4053-a94b-50b3ef1abeb7" />
+<img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/567034a9-6f29-4053-a94b-50b3ef1abeb7" />
 
 ### (Debug Mode) n = 1,000,007
 <img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/b44fe7e1-8907-4fe9-be7c-bfbf9357baa3" />
