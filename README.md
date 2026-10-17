@@ -70,7 +70,7 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 <img width="456" height="87" alt="image" src="https://github.com/user-attachments/assets/18df5d22-efe4-4997-83f4-ce46d1609be7" />
 
 ### SIMD YMM register
-<img width="454" height="76" alt="image" src="https://github.com/user-attachments/assets/8df6445b-16df-4e81-9183-19b48cc08ed3"/>[insert comparison of all implementations]
+<img width="454" height="76" alt="image" src="https://github.com/user-attachments/assets/8df6445b-16df-4e81-9183-19b48cc08ed3"/>
 
 * Correctness checks for all the tested vector sizes are already implemented in the main program and shown in the Program Output and Execution Time Section
 ---
