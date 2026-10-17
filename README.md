@@ -13,6 +13,12 @@
 ### Table
 [insert comparative table of execution time for all 4 kernels]
 
+| Vector Size | C (ms) | x84-64 (ms) | SIMD XMM (ms) | SIMD YMM (ms) |
+|-------------|--------|-------------|---------------|---------------|
+| [insert size] | [insert sec] | [insert sec] | [insert sec] | [insert sec] |
+| [insert size] | [insert sec] | [insert sec] | [insert sec] | [insert sec] |
+| [insert size] | [insert sec] | [insert sec] | [insert sec] | [insert sec] |
+
 ### Analysis
 [insert analysis of performance and speedup (how many times faster, why is it faster, etc.)]
 
