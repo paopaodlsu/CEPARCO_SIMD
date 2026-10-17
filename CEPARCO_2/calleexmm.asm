@@ -1,3 +1,4 @@
+
 section .text
 bits 64
 default rel
@@ -6,10 +7,10 @@ global vector_xmm
 vector_xmm:
     push rbp
     mov rbp, rsp
-    mov r10d, [rbp+48]     
+    mov r10d, [rbp+48]
     mov r11d, r10d
-    and r11d, -4 ; rounds down to nearest multiple of 4         
-    xor eax, eax           
+    and r11d, -4 ; rounds down to nearest multiple of 4
+    xor eax, eax
 
 L1:
     cmp eax, r11d
@@ -18,8 +19,8 @@ L1:
     vmovups xmm0, [r8 + rax*4]
     vmovups xmm1, [r9 + rax*4]
     vmulps xmm0, xmm0, xmm1
-    vaddps xmm0, xmm0, [rdx + rax*4]
-    vaddps xmm0, xmm1 
+    vmovups xmm2, [rdx + rax*4]
+    vaddps xmm0, xmm0, xmm2
     vmovups [rcx + rax*4], xmm0
 
     add eax, 4
