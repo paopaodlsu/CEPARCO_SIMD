@@ -102,6 +102,7 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 ### (Debug Mode) n = 1,000,007
 <img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/b44fe7e1-8907-4fe9-be7c-bfbf9357baa3" />
 
+
 The boundary check verifies that the XMM and YMM implementations correctly process vector elements that remain after the main SIMD loop. Tests were performed using vector sizes of 1,003 and 1,000,007, which are not divisible by the SIMD widths. The remaining elements are handled by scalar loops to ensure correct results without accessing elements beyond the vector boundaries.
 
 ---
