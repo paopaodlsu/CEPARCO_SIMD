@@ -83,6 +83,11 @@ void display_results(const char* name, float* arrA, int n,
 }
 
 int main(int argc, char* argv[]) {
+    // int n = 1048576 // 2^20
+	// int n = 67108864 // 2^26
+    // int n = 268435456 // 2^28
+    // int n = 1003 // value for boundary check 1
+    // int n = 1000007 // value for boundary check 2
     int n = 268435456;
 
     if (argc > 1) {
