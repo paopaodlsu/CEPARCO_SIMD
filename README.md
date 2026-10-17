@@ -91,6 +91,7 @@ In Release mode, the optimized C implementation outperformed scalar assembly at 
 The small performance difference between XMM and YMM for larger vectors suggests that memory bandwidth may limit the benefit of additional SIMD width. The vector triad performs one multiplication and one addition per element while transferring 16 bytes of data. Consequently, performance depends not only on the number of elements processed per instruction but also on memory behavior, loop overhead, and compiler optimization.
 
 Overall, YMM provided the best measured performance for the largest vector size, while optimized C remained competitive in Release mode. The results demonstrate the importance of evaluating both Debug and Release builds and comparing actual execution times rather than assuming that hand-written assembly or wider SIMD registers will always be faster.
+
 ---
 ## Implementation Discussion
 [insert problems encountered and solutions]
