@@ -9,7 +9,7 @@
 [insert screenshot of the program output with execution time for all cases]
 ### Debug Program Output
 ### 2<sup>20</sup>
-<img width="480" height="500" alt="image" src="https://github.com/user-attachments/assets/e4824f90-ed5f-4629-a438-3c6f5dd30d8b"/>
+<img width="490" height="500" alt="image" src="https://github.com/user-attachments/assets/e4824f90-ed5f-4629-a438-3c6f5dd30d8b"/>
 
 ### 2<sup>26</sup>
 <img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/333239c2-6d5c-4dd6-a2c9-a0bbe1c71b00" />
