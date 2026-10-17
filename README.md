@@ -56,6 +56,13 @@ Speedup is calculated by dividing the C execution time by the execution time of 
 | 2<sup>26</sup> | 1.000x | 2.934x | 4.005x | 4.054x |
 | 2<sup>28</sup> | 1.000x | 2.415x | 4.054x | 4.225x |
 
+### Release Results
+| Vector Size | C | x84-64 | SIMD XMM | SIMD YMM |
+|-------------|---|--------|----------|----------|
+| 2<sup>20</sup> | 1.000x | 0.755x | 1.230x | 1.238x |
+| 2<sup>26</sup> | 1.000x | 0.827x | 0.937x | 0.945x |
+| 2<sup>28</sup> | 1.000x | 0.766x | 0.997x | 1.020x |
+
 ### Analysis
 
 The results show that performance depends on the vector size and build configuration. In Debug mode, the assembly implementations outperformed the C implementation consistently. YMM was approximately 4.2% faster than XMM.
