@@ -6,7 +6,8 @@
 - Tiu, Kyle 
 ---
 ## Program Output and Execution Time
-[insert screenshot of the program output with execution time for all cases]
+The following screenshots show the program outputs and average execution times for all tested vector sizes in both Debug and Release modes
+
 ### Debug Program Output
 ### 2<sup>20</sup>
 <img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/e4824f90-ed5f-4629-a438-3c6f5dd30d8b"/>
@@ -71,6 +72,7 @@ The correctness results below use the Debug results with a vector size of 2<sup>
 ### SIMD YMM register
 <img width="454" height="76" alt="image" src="https://github.com/user-attachments/assets/8df6445b-16df-4e81-9183-19b48cc08ed3" />
 
+Correctness checks for all tested vector sizes are already implemented in the main program and shown in the Program Output and Execution Time section.
 ---
 ## Boundary Check
 [insert screenshot of boundary check for SIMD XMM and SIMD YMM]
